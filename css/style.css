@@ -103,6 +103,12 @@ h3 {
   padding: 0.25em 1em;
 }
 
+.section__subtitle--work {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  margin-bottom: 2em;
+}
+
 /* Intro section */
 
 nav {
@@ -164,5 +170,11 @@ nav {
 
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portfolio__item {
+  background: var(--clr-accent);
 }
