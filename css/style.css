@@ -124,8 +124,9 @@ h3 {
 
   .logo {
     position: absolute;
-    top: 1.5em;
-    left: 1.5em;
+    top: 1em;
+    left: 1em;
+    width: 70px;
   }
 
   .nav {
@@ -221,8 +222,13 @@ h3 {
   header {
     display: flex;
     justify-content: space-around;
-    padding: 1.5em;
+    padding: 1em;
     background-color: var(--clr-accent);
+  }
+
+  .logo {
+    width: 150px;
+    align-self: center;
   }
 
   .nav-toggle {
