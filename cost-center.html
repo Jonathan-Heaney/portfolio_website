@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jonathan Heaney | Cost Center Analysis</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#about" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#work" class="nav__link">My Work</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#music" class="nav__link">Music</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Introduction -->
+    <section class="portfolio-item-intro">
+      <h1>Cost Center vs. Profit Center Survey</h1>
+    </section>
+
+    <div class="portfolio-item-individual">
+      <h2>Background</h2>
+      <p>
+        As part of the
+        <a
+          href="https://www.balto.ai/conversation-excellence-lab/"
+          target="_blank"
+          >Conversation Excellence Lab</a
+        >
+        at Balto, I performed analyses on questions that were important to our
+        customers in the contact center space. One of the questions that kept
+        coming up was whether executives should consider their contact center as
+        a cost center or a profit center. Would investing resources into a
+        contact center pay off, or would it be better to simply cut costs as
+        much as possible?
+      </p>
+      <p>
+        To study this question, we launched a survey of over 360 executives
+        (director-level or above) who work with or alongside contact centers in
+        their organization. These executives answered a number of basic
+        demographic questions, both about themselves and their organization.
+        They also answered three key questions that served as a proxy for how
+        likely they were to view their contact center as a cost center or profit
+        center. We asked them to rate their agreement with the following
+        statements, on a scale of 1-5:
+      </p>
+      <ul>
+        <li>Great service is the best way to build customer loyalty.</li>
+        <li>
+          Excellent service is less important than solving a customer’s problem
+          as quickly as possible.
+        </li>
+        <li>
+          Anything other than self-service support for customers ends up being a
+          drain on company resources.
+        </li>
+      </ul>
+      <p>
+        We also asked them for a few metrics that would assess their
+        organization’s results: agent attrition rate, customer NPS (Net Promoter
+        Score) and CSAT (Customer Satisfaction) score. Our hypothesis was that
+        the executives that viewed their contact centers as profit centers,
+        rather than as cost centers, would have better performance on these
+        metrics.
+      </p>
+      <h2>Analysis</h2>
+      <p>I performed my analysis in both Google Sheets and Microsoft Excel.</p>
+      <p>
+        In
+        <a
+          href="https://docs.google.com/spreadsheets/d/1d_9B6IgP3sd_a8kw2hHMiN-6w9Pk_mZa6zLkYhc8YvQ/edit#gid=787026647"
+          target="_blank"
+          >this Google Sheets document</a
+        >, which includes a subset of the raw survey data, I analyzed the
+        effects of many different variables. Each sheet measures the effect of a
+        different independent variable (such as age, industry, or title) on a
+        variety of dependent variables (such as agreement with the cost center
+        statements).
+      </p>
+      <p>
+        With Excel, I installed the Real Statistics for Excel package to perform
+        more complicated statistical tests that couldn’t be done in Google
+        Sheets, particularly the ANOVA/Tukey HSD (honestly significant
+        difference) tests. These tests are used to determine whether any means
+        are significantly different from each other, and if so, which ones. For
+        example, I would test whether the mean NPS of executives who answered
+        with a low score to one of the cost center questions was significantly
+        different from the mean NPS among those who answered with a high score.
+        I performed many of these tests- the process and results can be found in
+        <a
+          href="https://1drv.ms/x/s!Aok7gIqQfbnZrVYA-MrbM8rkZdjW?e=VJdZhb"
+          target="_blank"
+          >this Excel workbook</a
+        >. There are comments throughout the document which highlight specific
+        results.
+      </p>
+      <h2>Deliverables</h2>
+      <p>
+        The purpose of this analysis was to publish articles on our website
+        highlighting our findings and providing suggestions to contact center
+        managers about how to apply them. I did not write these articles, but I
+        did perform all the analyses and create all of the graphs found in the
+        articles using a JavaScript library called Chart.js.
+      </p>
+      <p>The published articles are linked below:</p>
+      <ul>
+        <li>
+          <a
+            href="https://www.balto.ai/research/how-to-recession-proof-your-contact-center/"
+            target="_blank"
+            >How to Recession-Proof Your Contact Center, According to 360+
+            Executives
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.balto.ai/research/contact-center-budget-cuts-by-industry/"
+            target="_blank"
+            >3 Reasons Why Contact Centers Shouldn’t Cut Budgets During a
+            Recession
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <a href="mailto:jonathan.heaney@gmail.com" class="footer__link"
+        >jonathan.heaney@gmail.com</a
+      >
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://github.com/Jonathan-Heaney"
+            target="_blank"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://www.linkedin.com/in/jonathan-heaney-64468982/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+        <li class="social-list__item tableau">
+          <a
+            class="social-list__link"
+            href="https://public.tableau.com/app/profile/jonathan.heaney"
+            target="_blank"
+          >
+            <i class="fa-solid fa-chart-simple"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
