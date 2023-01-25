@@ -429,3 +429,9 @@ h5 {
 .tableauPlaceholder {
   margin: 1.5em 0 2.5em;
 }
+
+@media (max-width: 599px) {
+  .tableau {
+    display: none;
+  }
+}
