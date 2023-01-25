@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jonathan Heaney | Workforce Survey</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#about" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#work" class="nav__link">My Work</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#music" class="nav__link">Music</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Introduction -->
+    <section class="portfolio-item-intro">
+      <h1>Balto Workforce Survey</h1>
+    </section>
+
+    <div class="portfolio-item-individual">
+      <h2>Background</h2>
+      <p>
+        At Balto, I was part of the
+        <a
+          href="https://www.balto.ai/conversation-excellence-lab/"
+          target="_blank"
+          >Conversation Excellence Lab</a
+        >, which conducts academic research to generate insights for contact
+        centers.
+      </p>
+      <p>
+        For this project, we partnered with Centiment to survey over 2,000
+        contact center agents in order to find out more about the typical agent
+        profile and experience. We asked a number of basic demographic
+        questions, as well as more in-depth questions related to their job
+        satisfaction and enjoyment, their career aspirations, their motivations
+        for joining the industry, and much more.
+      </p>
+      <p>
+        One of the reasons for conducting this survey was that at the time of
+        this research, America was in the midst of the “Great Resignation”, when
+        many employees were quitting in droves. Many of our customers in the
+        contact center industry were hit hard by these resignations, so we
+        performed this analysis to help them reduce attrition by giving them
+        insight into their workers’ motivations.
+      </p>
+      <h2>Analysis</h2>
+      <p>
+        <a
+          href="https://docs.google.com/spreadsheets/d/1dM3koLb-ENfYdE-6cFJir-U_gp8zZ2swhueMq20qkFY/edit#gid=1636211487"
+          target="_blank"
+          >Here</a
+        >
+        is a link to a subset of the raw data, as well as all of the analyses
+        performed in individual sheets. I used Google Sheets for this project.
+        Each sheet measures the effect of a different independent variable (such
+        as gender, education level, or salary) on a wide variety of dependent
+        variables (such as satisfaction with pay or where they see themselves in
+        5 years).
+      </p>
+      <p>
+        Some variables were used as both an independent variable and a dependent
+        variable. For example, we asked about the agent’s fear about
+        automation/AI replacing them in the workforce- this fear of automation
+        was examined as both a predictor of job enjoyment (in which case fear of
+        automation was the independent variable) and as a result of demographic
+        factors (in which case it was the dependent variable). Many other
+        variables were treated similarly.
+      </p>
+      <h2>Deliverables</h2>
+      <p>
+        The deliverable of this analysis was a series of articles, published on
+        our website, which summarized our findings and gave suggestions to
+        contact center managers about how to apply them. I did not write these
+        articles, but I did perform all the analyses and create all of the
+        graphs found in the articles using a JavaScript library called Chart.js.
+      </p>
+      <p>All of the published articles are linked below:</p>
+      <ul>
+        <li>
+          <a
+            href="https://www.balto.ai/research/in-person-or-virtual/"
+            target="_blank"
+            >In-Person or Virtual? 6 Surprising Findings About Remote Work at
+            Contact Centers</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.balto.ai/research/7-industry-insights/"
+            target="_blank"
+            >7 Industry Insights for the Contact Center</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.balto.ai/research/gender-pay-gaps-in-the-contact-center/"
+            target="_blank"
+            >Missing Cents: Gender Pay Gaps in the Contact Center</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.balto.ai/research/where-do-contact-center-workers-see-themselves-in-5-years/"
+            target="_blank"
+            >Where Do Contact Center Workers See Themselves in 5 Years?</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.balto.ai/research/contact-center-attrition-2022/"
+            target="_blank"
+            >Contact Center Attrition: What Agents Want in 2022</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <a href="mailto:jonathan.heaney@gmail.com" class="footer__link"
+        >jonathan.heaney@gmail.com</a
+      >
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://github.com/Jonathan-Heaney"
+            target="_blank"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://www.linkedin.com/in/jonathan-heaney-64468982/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+        <li class="social-list__item tableau">
+          <a
+            class="social-list__link"
+            href="https://public.tableau.com/app/profile/jonathan.heaney"
+            target="_blank"
+          >
+            <i class="fa-solid fa-chart-simple"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
