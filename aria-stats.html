@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jonathan Heaney | Aria Stats</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#about" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#work" class="nav__link">My Work</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#music" class="nav__link">Music</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Introduction -->
+    <section class="portfolio-item-intro">
+      <h1>Opera Audition Aria Statistics, 2013-2019</h1>
+    </section>
+
+    <div class="portfolio-item-individual">
+      <h2>Background</h2>
+      <p>
+        Every year, hundreds of the most talented young opera singers in the
+        country audition for the chance to take part in one of a handful of
+        prestigious summer opera festivals. These singers prepare 4-6 pieces
+        (known as "arias") to sing for a panel of judges, and usually perform
+        1-3 of them. One festival, Wolf Trap Opera in Vienna, Virginia, compiles
+        a yearly list of every single aria that was offered by a singer. By
+        looking at a collection of these lists over the years, one can gain a
+        pretty clear picture of which arias, operas, and composers are most
+        popular among young vocal artists.
+      </p>
+      <p>
+        Knowing these arias was fundamental to my career as an opera pianist.
+        One of my most reliable sources of income was playing for singers in
+        these auditions, and often playing an entire day of auditions for the
+        opera companies. I would sit in a room for 8 hours as singers came in
+        one after the other, and I would have to perform whatever they put in
+        front of me, whether I knew it or not. Needless to say, this job became
+        a lot easier the more arias I had in my back pocket. It's not possible
+        to learn every aria, but by learning the most popular, I could get a
+        pretty good handle on what I might have to play.
+      </p>
+      <p>
+        The foundational importance of knowing these popular arias was what
+        motivated me to assemble Wolf Trap's list into a database back in 2019.
+        I spent hours manually typing out all the data about the pieces and
+        calculating the totals across a 7-year period from 2013-2019. I
+        basically found out what I needed to know, but I was curious to come
+        back to this dataset after learning some real data analysis and
+        visualization tools like Google Sheets/Excel, SQL, and Tableau.
+      </p>
+      <h2>Analysis</h2>
+      <p>Links to data, SQL code, and graphs:</p>
+      <ul>
+        <li>
+          <a
+            href="https://docs.google.com/spreadsheets/d/17Qt5mnLgXGZ1ryyki03XkbZMpSovYYgT1uRyux-f1eI/edit#gid=1229051757"
+            target="_blank"
+            >Dataset</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/Jonathan-Heaney/aria_stats/blob/main/aria_stats.sql"
+            target="_blank"
+            >SQL Queries</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://docs.google.com/spreadsheets/d/1gzVztDbYSH-RA88E-dpb_SUojyeiU2S_728B0uojT0E/edit#gid=1617119782"
+            target="_blank"
+            >Results sheets</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://public.tableau.com/app/profile/jonathan.heaney/viz/AriaStats/AriaRanking"
+            target="_blank"
+            >Tableau Visualizations</a
+          >
+        </li>
+      </ul>
+      <h2>Conclusions</h2>
+      <p>
+        I performed three types of queries in my analysis: some to filter the
+        aria list, some to determine the popularity of different
+        composers/operas/etc, and some to track changes across time.
+      </p>
+      <h4>Filtering the Aria List</h4>
+      <p>
+        In addition to playing arias in auditions, one of my other main roles
+        was to coach singers and help them choose repertoire. A singer might
+        come to me and ask for a new piece to work on- they might have a
+        language in mind, or an era of music, or they might want to choose
+        something less popular to stand out. SQL provides the tools to filter
+        the data in any of these ways, to meet any request of any singer. I
+        included several different sample queries in my analysis that filtered
+        the data based on potential requests, including:
+      </p>
+      <ul>
+        <li>
+          A tenor wants to learn a rarely-performed French aria
+          <a
+            href="https://public.tableau.com/app/profile/jonathan.heaney/viz/AriaStats/FrenchTenorArias"
+            target="_blank"
+            >(Graph)</a
+          >
+        </li>
+        <li>
+          A mezzo needs a piece written before 1750
+          <a
+            href="https://public.tableau.com/app/profile/jonathan.heaney/viz/AriaStats/EarlyMezzoArias"
+            target="_blank"
+            >(Graph)</a
+          >
+        </li>
+        <li>
+          A baritone doesn't want to sing any Italian music or 19th-century
+          music
+          <a
+            href="https://public.tableau.com/app/profile/jonathan.heaney/viz/AriaStats/Non-ItalianBaritoneArias"
+            target="_blank"
+            >(Graph)</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <a href="mailto:jonathan.heaney@gmail.com" class="footer__link"
+        >jonathan.heaney@gmail.com</a
+      >
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://github.com/Jonathan-Heaney"
+            target="_blank"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://www.linkedin.com/in/jonathan-heaney-64468982/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+        <li class="social-list__item tableau">
+          <a
+            class="social-list__link"
+            href="https://public.tableau.com/app/profile/jonathan.heaney"
+            target="_blank"
+          >
+            <i class="fa-solid fa-chart-simple"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
