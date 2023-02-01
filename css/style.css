@@ -16,8 +16,11 @@
   --fw-bold: 900;
 
   --clr-light: #fff;
-  --clr-dark: #303030;
-  --clr-accent: #16e0bd;
+  --clr-dark: #030d16;
+  --clr-bg-gray: #b4bdc6;
+  --clr-dark-blue: #0a2d4f;
+  --clr-main-accent: #1163b2;
+  --clr-accent-light: #89c0f5;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -118,7 +121,7 @@ strong {
 
 .section__subtitle--intro,
 .section__subtitle--about {
-  background: var(--clr-accent);
+  background: var(--clr-accent-light);
   font-family: var(--ff-secondary);
   margin-bottom: 1em;
   padding: 0.25em 1em;
@@ -209,7 +212,7 @@ strong {
   .hamburger,
   .hamburger::before,
   .hamburger::after {
-    background-color: var(--clr-accent);
+    background-color: var(--clr-main-accent);
     width: 2.5em;
     height: 3px;
     border-radius: 1em;
@@ -240,7 +243,6 @@ strong {
     display: flex;
     justify-content: space-around;
     padding: 1em;
-    /* background-color: var(--clr-accent); */
   }
 
   .logo {
@@ -255,6 +257,7 @@ strong {
   .nav__list {
     display: flex;
     gap: 50px;
+    color: var(--clr-dark-blue);
   }
 }
 
@@ -273,7 +276,7 @@ strong {
 }
 
 .nav__link:hover {
-  color: var(--clr-light);
+  color: var(--clr-main-accent);
 }
 
 /* Intro section */
@@ -322,7 +325,7 @@ strong {
 
 .about-me,
 .music {
-  background-color: #eee;
+  background-color: var(--clr-bg-gray);
 }
 
 .about-me__text,
@@ -381,8 +384,8 @@ strong {
 /* footer */
 
 .footer {
-  background: #111;
-  color: var(--clr-accent);
+  background: var(--clr-dark);
+  color: var(--clr-accent-light);
   text-align: center;
   padding: 1em 0;
   font-size: var(--fs-body);
