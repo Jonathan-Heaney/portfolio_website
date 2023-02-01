@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;900&family=Source+Sans+Pro:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
 
 *,
 *::before,
@@ -9,11 +9,11 @@
 /* Custom Properties */
 
 :root {
-  --ff-primary: 'Source Sans Pro', sans-serif;
-  --ff-secondary: 'Source Code Pro', monospace;
+  --ff-primary: 'Barlow', sans-serif;
+  --ff-secondary: 'IBM Plex Sans', sans-serif;
 
   --fw-reg: 300;
-  --fw-bold: 900;
+  --fw-bold: 700;
 
   --clr-light: #fff;
   --clr-dark: #030d16;
@@ -104,6 +104,7 @@ strong {
 .section__title {
   margin-bottom: 0.25em;
   text-align: center;
+  color: var(--clr-dark-blue);
 }
 
 .section__title--intro {
@@ -119,16 +120,16 @@ strong {
   font-size: var(--fs-h3);
 }
 
-.section__subtitle--intro,
-.section__subtitle--about {
+.section__subtitle--intro {
   background: var(--clr-accent-light);
   font-family: var(--ff-secondary);
+  color: var(--clr-dark-blue);
   margin-bottom: 1em;
   padding: 0.25em 1em;
 }
 
 .section__subtitle--work {
-  color: var(--clr-accent);
+  color: var(--clr-main-accent);
   font-weight: var(--fw-bold);
   margin-bottom: 2em;
 }
@@ -290,7 +291,7 @@ strong {
 }
 
 .section__subtitle--intro {
-  display: inline-block;
+  display: block;
 }
 
 @media (min-width: 600px) {
