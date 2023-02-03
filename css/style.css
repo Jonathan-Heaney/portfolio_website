@@ -21,7 +21,10 @@
   --clr-dark-blue: #0a2d4f;
   --clr-main-accent: #1163b2;
   --clr-accent-light: #89c0f5;
+  --clr-accent-green: #3ea44f;
+  --clr-text-light: #eaf1f8;
 
+  --fs-name: 4rem;
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
@@ -35,6 +38,7 @@
 
 @media (min-width: 800px) {
   :root {
+    --fs-name: 5rem;
     --fs-h1: 4.5rem;
     --fs-h2: 3.75rem;
     --fs-h3: 2rem;
@@ -99,6 +103,7 @@ h5 {
 
 strong {
   font-weight: var(--fw-bold);
+  font-size: var(--fs-name);
 }
 
 .section__title {
@@ -122,9 +127,9 @@ strong {
 }
 
 .section__subtitle--intro {
-  background: var(--clr-bg-gray);
+  background: var(--clr-accent-green);
   font-family: var(--ff-secondary);
-  color: var(--clr-dark-blue);
+  color: var(--clr-text-light);
   margin-bottom: 1em;
   padding: 0.25em 1em;
 }
@@ -137,7 +142,7 @@ strong {
 
 /* Mobile header */
 
-@media (max-width: 599px) {
+@media (max-width: 699px) {
   header {
     display: flex;
     justify-content: right;
@@ -240,7 +245,7 @@ strong {
 
 /* Desktop header */
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   header {
     display: flex;
     justify-content: space-around;
@@ -283,45 +288,22 @@ strong {
 
 /* Intro section */
 
-.intro {
-  position: relative;
-}
+@media (max-width: 699px) {
+  .desktop-img {
+    display: none;
+  }
 
-.intro__img {
-  box-shadow: var(--bs);
-}
-
-.section__subtitle--intro {
-  display: block;
-}
-
-@media (min-width: 600px) {
-  .intro {
-    display: grid;
-    width: min-content;
+  .mobile-img {
     margin: 0 auto;
-    grid-column-gap: 1em;
-    grid-template-areas:
-      'img title'
-      'img subtitle';
-    grid-template-columns: min-content max-content;
   }
+}
 
-  .intro__img {
-    grid-area: img;
-    min-width: 250px;
-    position: relative;
-    z-index: 2;
+@media (min-width: 700px) {
+  .mobile-img {
+    display: none;
   }
-
-  .section__subtitle--intro {
-    align-self: start;
-    grid-column: -1 / 1;
-    grid-row: 2;
-    text-align: right;
-    position: relative;
-    left: -1.5em;
-    width: calc(100% + 1.5em);
+  .desktop-img {
+    margin: -5rem auto 0;
   }
 }
 
@@ -366,7 +348,7 @@ strong {
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {
   transform: scale(1.1);
-  opacity: 0.75;
+  opacity: 0.25;
 }
 
 .iframe-container {
