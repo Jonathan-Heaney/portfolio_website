@@ -315,10 +315,10 @@ strong {
   }
 }
 
-.about-me__text,
 .music {
   max-width: 1000px;
   margin: 0 auto;
+  padding-top: 0;
 }
 
 .my-work {
@@ -415,7 +415,7 @@ strong {
 
 .portfolio-item-intro {
   color: var(--clr-dark-blue);
-  margin: 0 auto;
+  margin: 0 auto -20px;
   max-width: 800px;
   text-align: center;
   padding: 3em;
