@@ -106,6 +106,18 @@ strong {
   font-size: var(--fs-name);
 }
 
+.portfolio_nav:hover {
+  color: #af7bc7;
+}
+
+.about_nav:hover {
+  color: #ca3631;
+}
+
+.resume_nav:hover {
+  color: var(--clr-accent-green);
+}
+
 .section__title {
   margin-bottom: 0.25em;
   text-align: center;
@@ -280,10 +292,6 @@ strong {
   font-weight: var(--fw-bold);
   font-size: var(--fs-h3);
   text-decoration: none;
-}
-
-.nav__link:hover {
-  color: var(--clr-main-accent);
 }
 
 /* Intro section */
