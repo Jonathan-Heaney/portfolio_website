@@ -315,13 +315,8 @@ strong {
   }
 }
 
-.about-me,
-.music {
-  background-color: var(--clr-bg-gray);
-}
-
 .about-me__text,
-.music__text {
+.music {
   max-width: 1000px;
   margin: 0 auto;
 }
