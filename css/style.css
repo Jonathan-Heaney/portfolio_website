@@ -365,15 +365,6 @@ strong {
   display: none;
 }
 
-.portfolio__img__overlay {
-  display: none;
-}
-
-.portfolio__img__overlay:hover {
-  display: grid;
-  z-index: 10;
-}
-
 @media (max-width: 500px) {
   .portfolio__img__main,
   .portfolio__img__cover {
