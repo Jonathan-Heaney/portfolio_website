@@ -109,6 +109,13 @@ p {
   font-weight: 300;
 }
 
+hr {
+  max-width: 900px;
+  width: 80%;
+  color: #eee;
+  opacity: 0.5;
+}
+
 .portfolio-item-individual li {
   font-family: var(--ff-secondary);
   font-size: var(--fs-body);
