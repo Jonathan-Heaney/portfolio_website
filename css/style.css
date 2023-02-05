@@ -363,6 +363,7 @@ strong {
 
 .portfolio__img__overlay {
   opacity: 0;
+  z-index: 5;
 }
 
 .portfolio__img__overlay:hover {
