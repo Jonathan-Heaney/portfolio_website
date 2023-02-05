@@ -465,6 +465,13 @@ strong {
   height: 100%;
 }
 
+.resume {
+  max-width: 800px;
+  margin: 5rem auto 0;
+  border: none;
+  outline: transparent;
+}
+
 /* footer */
 
 .footer {
