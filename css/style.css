@@ -361,8 +361,12 @@ strong {
   height: 280px;
 }
 
-.portfolio__img__cover:hover {
-  display: none;
+.portfolio__img__overlay {
+  opacity: 0;
+}
+
+.portfolio__img__overlay:hover {
+  opacity: 1;
 }
 
 @media (max-width: 500px) {
