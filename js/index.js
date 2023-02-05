@@ -1,8 +1,9 @@
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav__link');
-const portfolioImages = document.querySelectorAll('.portfolio__item');
-const portfolioCover = document.querySelectorAll('.portfolio__img__cover');
-const portfolioOverlay = document.querySelectorAll('.portfolio__img__overlay');
+const idealCustomer = document.querySelector('#ideal-customer-img');
+const idealCustomerCover = document.querySelector('#ideal-customer-cover');
+const costCenter = document.querySelector('#cost-center-img');
+const costCenterCover = document.querySelector('#cost-center-cover');
 
 navToggle.addEventListener('click', () => {
   document.body.classList.toggle('nav-open');
@@ -12,6 +13,22 @@ navLinks.forEach((link) => {
   link.addEventListener('click', () => {
     document.body.classList.remove('nav-open');
   });
+});
+
+idealCustomer.addEventListener('mouseover', () => {
+  idealCustomerCover.style.opacity = '0';
+});
+
+idealCustomer.addEventListener('mouseleave', () => {
+  idealCustomerCover.style.opacity = '1';
+});
+
+costCenter.addEventListener('mouseover', () => {
+  costCenterCover.style.opacity = '0';
+});
+
+costCenter.addEventListener('mouseleave', () => {
+  costCenterCover.style.opacity = '1';
 });
 
 // portfolioImages.forEach((image) => {
