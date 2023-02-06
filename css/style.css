@@ -377,8 +377,10 @@ strong {
   height: 280px;
 }
 
-.portfolio__img__overlay {
-  transition-duration: 500ms;
+@media (min-width: 700px) {
+  .portfolio__img__overlay {
+    transition-duration: 500ms;
+  }
 }
 
 .portfolio__img__overlay {
