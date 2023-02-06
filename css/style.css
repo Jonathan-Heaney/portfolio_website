@@ -378,6 +378,10 @@ strong {
 }
 
 .portfolio__img__overlay {
+  transition-duration: 500ms;
+}
+
+.portfolio__img__overlay {
   opacity: 0;
   z-index: 5;
 }
