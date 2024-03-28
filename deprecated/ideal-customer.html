@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jonathan Heaney | Ideal Customer Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/img/circle_logo.svg" />
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.svg" alt="" /></a>
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html#portfolio" class="nav__link portfolio_nav"
+                >Portfolio</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="index.html#about" class="nav__link about_nav"
+                >About Me</a
+              >
+            </li>
+            <li class="nav__item">
+              <a
+                href="https://drive.google.com/file/d/1XmEBFRS8TNJMlKNjHScTFaj2Flkckeav/view"
+                class="nav__link resume_nav"
+                target="_blank"
+                >Resume</a
+              >
+            </li>
+          </ul>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Introduction -->
+    <section class="portfolio-item-intro ideal-customer">
+      <h1>Balto Ideal Customer Profile</h1>
+    </section>
+
+    <div class="portfolio-item-individual ideal-customer">
+      <h2>Background</h2>
+      <p>
+        For this project, I was asked to help identify our company’s ideal
+        customer profile. Our company, Balto, sold an AI tool for contact
+        centers that gave agents real-time suggestions of what to say on every
+        call.
+      </p>
+      <p>There were three specific areas that I was asked to focus on:</p>
+      <ul>
+        <li>
+          Industry- We had customers across a variety of industries, and our
+          executives wanted to know if we should target or avoid any of those
+          industries in particular moving forward.
+        </li>
+        <li>
+          Tier- Our Revenue Operations Manager had developed a tentative tier
+          system based on what he thought would be the traits of a good
+          customer. There were 3 tiers, and my task was to validate whether
+          these tiers did indeed line up with positive results.
+        </li>
+        <li>
+          Integration type- Our product had to integrate with the customer’s
+          softphone system. It was easier for us to integrate with some systems
+          than with others, so we had developed a softphone scoring system. I
+          was asked to verify that this scoring system was correlated with
+          positive outcomes.
+        </li>
+      </ul>
+      <h2>Data Collection</h2>
+      <p>
+        I collected data from a variety of sources. The main one was Salesforce,
+        but a lot of data came from Google Sheets, Pendo, or even individual
+        contracts.
+      </p>
+      <p>I compiled data on all of our current as well as churned customers.</p>
+      <p>
+        Some of the most important data points to consider were the following:
+      </p>
+      <ul>
+        <li>ARR (Annual Recurring Revenue)</li>
+        <li>
+          Churn rate- What percent of customers within a given industry stopped
+          using our product
+        </li>
+        <li>
+          Sales cycle length- The number of days between when we first made
+          contact with a potential customer and when we signed a deal
+        </li>
+      </ul>
+      <h2>Analysis</h2>
+      <p>
+        I performed all the analysis in Google Sheets, with different sheets for
+        the industry, tier, and integration analysis for both current and
+        churned customers, as well as some sheets for direct comparison between
+        the two.
+      </p>
+      <p>
+        <a
+          href="https://docs.google.com/spreadsheets/d/1CPqkQYtSs_EDbA1xS0bW-tmlgDwail9n6jPC51-TVI0/edit#gid=4274183"
+          target="_blank"
+          >Here</a
+        >
+        is a link to the dataset, as well as all the analyses. I have restricted
+        the access to invitation-only at Balto's request to protect proprietary
+        interests. Additionally, all columns that show customer counts or raw
+        ARR figures have been hidden- all customer and ARR statistics use
+        percentages. All company names and softphone brands have been changed,
+        and many other aspects of the dataset have been changed as well.
+      </p>
+      <h2>Conclusions</h2>
+      <p>
+        <a
+          href="https://docs.google.com/presentation/d/1wniSkVkQi_gggz6TIucv6ItBz-6iE4yK8Ye8nP_e-0U/edit#slide=id.g35f391192_00"
+          target="_blank"
+          >Here</a
+        >
+        is a slide deck with a summary of key takeaways, which I presented to
+        executive stakeholders upon finishing the analysis. Its access is also
+        restricted.
+      </p>
+      <p>
+        A more in-depth look at results by industry can be found within
+        <a
+          href="https://docs.google.com/spreadsheets/d/1CPqkQYtSs_EDbA1xS0bW-tmlgDwail9n6jPC51-TVI0/edit#gid=374837327"
+          target="_blank"
+          >this sheet</a
+        >
+        of the analysis.
+      </p>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <a href="mailto:jonathan.heaney@gmail.com" class="footer__link"
+        >jonathan.heaney@gmail.com</a
+      >
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://github.com/Jonathan-Heaney"
+            target="_blank"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://www.linkedin.com/in/jonathan-heaney-64468982/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+        <li class="social-list__item tableau">
+          <a
+            class="social-list__link"
+            href="https://public.tableau.com/app/profile/jonathan.heaney"
+            target="_blank"
+          >
+            <i class="fa-solid fa-chart-simple"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
