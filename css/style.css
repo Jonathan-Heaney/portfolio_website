@@ -363,7 +363,7 @@ strong {
 .portfolio__copy {
   text-align: left;
   /* border: 1px solid red; */
-  max-width: 420px;
+  /* max-width: 420px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -375,6 +375,7 @@ strong {
   grid-column: 1;
   grid-row: 1;
   height: 280px;
+  /* border: 2px solid red; */
 }
 
 @media (min-width: 700px) {
@@ -439,7 +440,7 @@ strong {
   .portfolio {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    max-width: 900px;
+    max-width: 860px;
     margin: 0 auto;
     gap: 40px;
   }
