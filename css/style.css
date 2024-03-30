@@ -362,25 +362,26 @@ strong {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 2px solid blue;
-  /* width: 400px; */
+  gap: 5px;
 }
 
-/* .portfolio__item {
-  display: grid;
-} */
-
 .portfolio__img__main {
-  /* grid-column: 1;
-  grid-row: 1; */
   height: 280px;
   width: 410px;
-  border: 2px solid red;
+}
+
+.portfolio__text {
+  width: 410px;
+  color: var(--clr-dark);
 }
 
 @media (max-width: 500px) {
   .portfolio__img__main {
     height: 200px;
+    width: 300px;
+  }
+
+  .portfolio__text {
     width: 300px;
   }
 }
@@ -390,11 +391,19 @@ strong {
     height: 150px;
     width: 235px;
   }
+
+  .portfolio__text {
+    width: 235px;
+  }
 }
 
 @media (max-width: 290px) {
   .portfolio__img__main {
     height: 120px;
+    width: 200px;
+  }
+
+  .portfolio__text {
     width: 200px;
   }
 }
@@ -409,6 +418,7 @@ strong {
   }
 }
 
+/* Music video on About Me page */
 .video {
   max-width: 800px;
   margin: 0 auto;
@@ -434,8 +444,7 @@ strong {
   outline: transparent;
 }
 
-/* footer */
-
+/* Footer */
 .footer {
   background: var(--clr-dark);
   color: var(--clr-accent-light);
@@ -479,6 +488,8 @@ strong {
   padding: 0.5em;
 }
 
+
+/* Portfolio pages */
 .portfolio-item-intro {
   color: var(--clr-dark-blue);
   margin: 0 auto -20px;
@@ -547,30 +558,6 @@ strong {
 
 .opera-stats h4 {
   color: #4d92d4;
-}
-
-.cost-center h1 {
-  color: #942c26;
-}
-
-.cost-center h2 {
-  color: #ca3631;
-}
-
-.ideal-customer h1 {
-  color: #5e1a6f;
-}
-
-.ideal-customer h2 {
-  color: #af7bc7;
-}
-
-.workforce-survey h1 {
-  color: #2c353f;
-}
-
-.workforce-survey h2 {
-  color: #8a96a1;
 }
 
 .tableauPlaceholder {
