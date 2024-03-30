@@ -337,12 +337,14 @@ strong {
   }
 }
 
+/* On About Me page */
 .music {
   max-width: 1000px;
   margin: 0 auto;
   padding-top: 0;
 }
 
+/* Portfolio Section */
 .my-work {
   background-color: var(--clr-light);
   color: var(--clr-dark);
@@ -375,7 +377,8 @@ strong {
   grid-column: 1;
   grid-row: 1;
   height: 280px;
-  /* border: 2px solid red; */
+  width: 400px;
+  border: 2px solid red;
 }
 
 @media (min-width: 700px) {
@@ -405,6 +408,7 @@ strong {
   .portfolio__img__cover,
   .portfolio__img__overlay {
     height: 200px;
+    width: 300px;
   }
 
   .portfolio__copy {
@@ -421,6 +425,7 @@ strong {
   .portfolio__img__cover,
   .portfolio__img__overlay {
     height: 150px;
+    width: 235px;
   }
 
   .portfolio__copy {
@@ -433,6 +438,7 @@ strong {
   .portfolio__img__cover,
   .portfolio__img__overlay {
     height: 120px;
+    width: 200px;
   }
 }
 
