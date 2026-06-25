@@ -1,180 +1,527 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jonathan Heaney | Full-Stack Developer</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    <meta
+      name="description"
+      content="Jonathan Heaney is a pianist and vocal coach based in St. Louis, MO, available for opera, concert, and coaching work."
     />
+    <title>Jonathan Heaney | Pianist &amp; Vocal Coach</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/img/code-circle.svg" />
+    <style>
+      /* ── Reset & base ─────────────────────────────────────── */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    <script src="js/index.js" defer></script>
+      :root {
+        --bg: #f7f6f2;
+        --bg-alt: #edeae3;
+        --ink: #0b0c0e;
+        --ink-soft: #5a6475;
+        --blue: #2b4c8c;
+        --blue-lt: #3d6bb5;
+        --rule: #d0cbbc;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* ── Layout container ─────────────────────────────────── */
+      .container {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      /* ── Nav ──────────────────────────────────────────────── */
+      nav {
+        padding: 2rem 0 1.5rem;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      nav .container {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .nav-name {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 300;
+        font-size: 1.15rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink);
+        text-decoration: none;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        font-size: 0.72rem;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        text-decoration: none;
+        transition: color 0.15s;
+      }
+
+      .nav-links a:hover {
+        color: var(--blue);
+      }
+
+      /* ── Hero / masthead ──────────────────────────────────── */
+      .hero {
+        padding: 5rem 0 4rem;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .hero-inner {
+        display: flex;
+        align-items: flex-start;
+        gap: 3.5rem;
+      }
+
+      .hero-text {
+        flex: 1;
+      }
+
+      .hero-eyebrow {
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--blue);
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 300;
+        font-size: clamp(3rem, 7vw, 4.5rem);
+        line-height: 1.05;
+        letter-spacing: -0.01em;
+        color: var(--ink);
+        margin-bottom: 0.4rem;
+      }
+
+      .hero-rule {
+        width: 3rem;
+        height: 2px;
+        background: var(--blue);
+        margin: 1.5rem 0;
+      }
+
+      .hero-subtitle {
+        font-size: 0.9rem;
+        color: var(--ink-soft);
+        letter-spacing: 0.04em;
+      }
+
+      /* ── Headshot ─────────────────────────────────────────── */
+      /*
+      DROP YOUR HEADSHOT HERE
+      Replace "img/headshot.jpg" with your actual file path.
+      Recommended: square or portrait crop, at least 400px wide.
+      The <img> tag is in the HTML below inside .hero-photo.
+    */
+      .hero-photo {
+        flex-shrink: 0;
+        width: 200px;
+      }
+
+      .hero-photo img {
+        width: 100%;
+        display: block;
+        /* Slightly desaturated to keep the palette coherent */
+        filter: grayscale(15%);
+      }
+
+      /* ── Sections ─────────────────────────────────────────── */
+      section {
+        padding: 4rem 0;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      section:last-of-type {
+        border-bottom: none;
+      }
+
+      .section-label {
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--blue);
+        margin-bottom: 2rem;
+      }
+
+      /* ── About / Bio ──────────────────────────────────────── */
+      .bio p {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: var(--ink);
+        margin-bottom: 1.2em;
+      }
+
+      .bio p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── Upcoming ─────────────────────────────────────────── */
+      .upcoming-empty {
+        font-size: 0.9rem;
+        color: var(--ink-soft);
+        font-style: italic;
+      }
+
+      /*
+      TO ADD A GIG:
+      Replace or supplement the <p class="upcoming-empty"> tag with
+      one or more <div class="gig"> blocks:
+
+      <div class="gig">
+        <span class="gig-date">July 12, 2025</span>
+        <span class="gig-title">Opera Theatre of Saint Louis — <em>La traviata</em></span>
+        <span class="gig-detail">Loretto-Hilton Center, St. Louis, MO</span>
+      </div>
+    */
+      .gig {
+        display: grid;
+        grid-template-columns: 7rem 1fr;
+        gap: 0.2rem 1.5rem;
+        padding: 1.25rem 0;
+        border-bottom: 1px solid var(--rule);
+        align-items: start;
+      }
+
+      .gig:first-of-type {
+        border-top: 1px solid var(--rule);
+      }
+
+      .gig-date {
+        font-size: 0.78rem;
+        font-weight: 400;
+        color: var(--ink-soft);
+        letter-spacing: 0.04em;
+        padding-top: 0.15em;
+      }
+
+      .gig-title {
+        font-size: 0.97rem;
+        color: var(--ink);
+      }
+
+      .gig-detail {
+        grid-column: 2;
+        font-size: 0.8rem;
+        color: var(--ink-soft);
+      }
+
+      /* ── Projects ─────────────────────────────────────────── */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .project-card {
+        border: 1px solid var(--rule);
+        padding: 1.75rem;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        transition:
+          border-color 0.15s,
+          background 0.15s;
+      }
+
+      .project-card:hover {
+        border-color: var(--blue-lt);
+        background: var(--bg-alt);
+      }
+
+      .project-card-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 400;
+        font-size: 1.3rem;
+        color: var(--ink);
+        margin-bottom: 0.5rem;
+      }
+
+      .project-card-desc {
+        font-size: 0.82rem;
+        color: var(--ink-soft);
+        line-height: 1.6;
+      }
+
+      .project-card-link {
+        display: inline-block;
+        margin-top: 1rem;
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--blue);
+      }
+
+      /* ── Contact ──────────────────────────────────────────── */
+      .contact-line {
+        font-size: 1rem;
+        color: var(--ink-soft);
+        margin-bottom: 0.5rem;
+      }
+
+      .contact-email {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 400;
+        font-size: 1.6rem;
+        color: var(--ink);
+        text-decoration: none;
+        border-bottom: 1px solid var(--blue);
+        padding-bottom: 1px;
+        transition: color 0.15s;
+      }
+
+      .contact-email:hover {
+        color: var(--blue);
+      }
+
+      /* ── Footer ───────────────────────────────────────────── */
+      footer {
+        padding: 2rem 0;
+        border-top: 1px solid var(--rule);
+      }
+
+      footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .footer-name {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 300;
+        font-size: 0.9rem;
+        letter-spacing: 0.08em;
+        color: var(--ink-soft);
+      }
+
+      .footer-copy {
+        font-size: 0.72rem;
+        color: var(--rule);
+      }
+
+      /* ── Responsive ───────────────────────────────────────── */
+      @media (max-width: 600px) {
+        .hero-inner {
+          flex-direction: column-reverse;
+          gap: 2rem;
+        }
+
+        .hero-photo {
+          width: 140px;
+        }
+
+        nav .container {
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+
+        .nav-links {
+          gap: 1.25rem;
+        }
+
+        .gig {
+          grid-template-columns: 1fr;
+          gap: 0.25rem;
+        }
+
+        .gig-detail {
+          grid-column: 1;
+        }
+      }
+
+      /* ── Reduced motion ───────────────────────────────────── */
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .project-card,
+        .nav-links a,
+        .contact-email {
+          transition: none;
+        }
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <img src="img/new-logo.svg" alt="" />
-      </div>
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#portfolio" class="nav__link portfolio_nav">Portfolio</a>
-          </li>
-          <li class="nav__item">
-            <a href="about-me.html" class="nav__link about_nav">About Me</a>
-          </li>
-          <li class="nav__item">
-            <a
-              href="https://drive.google.com/file/d/16iD-EuGF4JU4bnJYh1ZxyMmI4snf5NGS/view?usp=sharing"
-              class="nav__link resume_nav"
-              target="_blank"
-              >Resume</a
-            >
-          </li>
+    <!-- ── Navigation ──────────────────────────────────────── -->
+    <nav>
+      <div class="container">
+        <a href="#" class="nav-name">Jonathan Heaney</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#upcoming">Upcoming</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
+      </div>
+    </nav>
+
+    <!-- ── Hero ────────────────────────────────────────────── -->
+    <header class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <p class="hero-eyebrow">
+              Pianist &amp; Vocal Coach · St. Louis, MO
+            </p>
+            <h1>Jonathan<br />Heaney</h1>
+            <div class="hero-rule"></div>
+            <p class="hero-subtitle">
+              Available for opera, concert, and coaching engagements
+            </p>
+          </div>
+
+          <!-- HEADSHOT: replace src with your image file, e.g. "img/headshot.jpg" -->
+          <div class="hero-photo">
+            <img
+              src="img/headshot.jpg"
+              alt="Jonathan Heaney, pianist and vocal coach"
+              width="200"
+              height="250"
+            />
+          </div>
+        </div>
+      </div>
     </header>
 
-    <!-- Introduction -->
-    <section class="intro" id="home">
-      <img
-        src="img/mobile-hero.png"
-        alt="Hi, I'm Jonathan, a full-stack developer"
-        class="mobile-img"
-      />
-      <img
-        src="img/desktop-hero.svg"
-        alt="Hi, I'm Jonathan, a full-stack developer"
-        class="desktop-img"
-      />
-    </section>
+    <main>
+      <!-- ── About ─────────────────────────────────────────── -->
+      <section id="about">
+        <div class="container">
+          <p class="section-label">About</p>
+          <div class="bio">
+            <p>
+              Jonathan Heaney is a pianist and vocal coach based in St. Louis,
+              MO. He frequently works with Opera Theatre of St. Louis, most
+              recently joining them as a repetiteur for their 2025 Festival
+              Season, the New Works Collective, and many concerts and
+              educational programs. He also performs regularly with Union Avenue
+              Opera and Winter Opera St. Louis.
+            </p>
+            <p>
+              A passionate teacher, he works as a staff pianist and coach at
+              Webster University, and a coach for the Opera Theatre of Saint
+              Louis Artists-in-Training program. Prior to his time in St. Louis,
+              he was based in New York City, with professional affiliations
+              including The Juilliard School, On Site Opera, Manhattan School of
+              Music, Seagle Festival, and Brevard Music Center.
+            </p>
+            <p>
+              He earned his bachelor's degree in piano performance from
+              Washington University in St. Louis, and his master's degree in
+              vocal accompanying from Manhattan School of Music under the
+              tutelage of Warren Jones.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <hr />
+      <!-- ── Upcoming ───────────────────────────────────────── -->
+      <section id="upcoming">
+        <div class="container">
+          <p class="section-label">Upcoming</p>
 
-    <!-- My Work -->
-    <section class="my-work" id="portfolio">
-      <div class="portfolio">
-        <div class="portfolio__item__container">
-          <a
-            href="https://www.contemporari.es"
-            class="portfolio__item"
-            target="_blank"
+          <!-- No gigs yet — replace this paragraph with <div class="gig"> blocks as needed. See CSS comments above for the template. -->
+          <p class="upcoming-empty">
+            Check back for upcoming performances and events.
+          </p>
+        </div>
+      </section>
+
+      <!-- ── Projects ──────────────────────────────────────── -->
+      <section id="projects">
+        <div class="container">
+          <p class="section-label">Projects</p>
+          <div class="projects-grid">
+            <a class="project-card" href="/aria-stats.html">
+              <p class="project-card-title">Opera Audition Aria Stats</p>
+              <p class="project-card-desc">
+                Data on which arias appear most frequently at professional opera
+                auditions, drawn from a large sample of audition panels.
+              </p>
+              <span class="project-card-link">Explore →</span>
+            </a>
+
+            <a class="project-card" href="/opera-stats.html">
+              <p class="project-card-title">
+                Worldwide Opera Performance Stats
+              </p>
+              <p class="project-card-desc">
+                A look at opera performance frequency across major companies
+                worldwide, tracking repertoire trends over time.
+              </p>
+              <span class="project-card-link">Explore →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Contact ───────────────────────────────────────── -->
+      <section id="contact">
+        <div class="container">
+          <p class="section-label">Contact</p>
+          <p class="contact-line">For engagements and inquiries:</p>
+          <a class="contact-email" href="mailto:jonathan.heaney@gmail.com"
+            >jonathan.heaney@gmail.com</a
           >
-            <img
-              src="img/moc.png"
-              class="portfolio__img__main"
-              alt="Map of Contemporaries"
-            />
-          </a>
-          <h3 class="portfolio__text">Map of Contemporaries</h3>
         </div>
+      </section>
+    </main>
 
-        <div class="portfolio__item__container">
-          <a
-            href="https://jonathan-heaney.github.io/guess-the-painting/"
-            class="portfolio__item"
-            target="_blank"
-          >
-            <img
-              src="img/seurat.jpeg"
-              class="portfolio__img__main"
-              alt="Guess the Painting"
-            />
-          </a>
-          <h3 class="portfolio__text">Guess the Painting</h3>
-        </div>
-
-        <div class="portfolio__item__container">
-          <a
-            href="https://jonathan-heaney.github.io/etch-a-sketch/"
-            class="portfolio__item"
-            target="_blank"
-          >
-            <img
-              src="img/etch-a-sketch.png"
-              class="portfolio__img__main"
-              alt="Etch-a-Sketch"
-            />
-          </a>
-          <h3 class="portfolio__text">Etch-a-Sketch</h3>
-        </div>
-
-        <div class="portfolio__item__container">
-          <a
-            href="https://jonathan-heaney.github.io/calculator/"
-            class="portfolio__item"
-            target="_blank"
-          >
-            <img src="img/calculator.png" class="portfolio__img__main" alt="" />
-          </a>
-          <h3 class="portfolio__text">Calculator</h3>
-        </div>
-
-        <div class="portfolio__item__container">
-          <a href="opera-stats.html" class="portfolio__item">
-            <img src="img/traviata.png" class="portfolio__img__main" alt="" />
-          </a>
-          <h3 class="portfolio__text">Worldwide Opera Performance Stats</h3>
-        </div>
-
-        <div class="portfolio__item__container">
-          <a href="aria-stats.html" class="portfolio__item">
-            <img src="img/papageno.jpg" class="portfolio__img__main" alt="" />
-          </a>
-          <h3 class="portfolio__text">Opera Audition Aria Stats</h3>
-        </div>
+    <!-- ── Footer ────────────────────────────────────────────── -->
+    <footer>
+      <div class="container">
+        <span class="footer-name">Jonathan Heaney</span>
+        <span class="footer-copy">&copy; <span id="year"></span></span>
       </div>
-    </section>
-
-    <!-- Footer -->
-
-    <footer class="footer">
-      <a href="mailto:jonathan.heaney@gmail.com" class="footer__link"
-        >jonathan.heaney@gmail.com</a
-      >
-      <ul class="social-list">
-        <li class="social-list__item">
-          <a
-            class="social-list__link"
-            href="https://github.com/Jonathan-Heaney"
-            target="_blank"
-          >
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a
-            class="social-list__link"
-            href="https://www.linkedin.com/in/jonathan-heaney-64468982/"
-            target="_blank"
-          >
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-        </li>
-        <li class="social-list__item tableau">
-          <a
-            class="social-list__link"
-            href="https://public.tableau.com/app/profile/jonathan.heaney"
-            target="_blank"
-          >
-            <i class="fa-solid fa-chart-simple"></i>
-          </a>
-        </li>
-      </ul>
     </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
