@@ -251,6 +251,15 @@
         color: var(--ink-soft);
       }
 
+      /* ── Recent Work ──────────────────────────────────────── */
+      /*
+      Past entries use the same .gig structure.
+      .gig-past slightly mutes the title to distinguish from upcoming.
+    */
+      .gig-past .gig-title {
+        color: var(--ink-soft);
+      }
+
       /* ── Projects ─────────────────────────────────────────── */
       .projects-grid {
         display: grid;
@@ -399,8 +408,10 @@
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#upcoming">Upcoming</a></li>
+          <li><a href="#recent">Recent Work</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="/resume.pdf" target="_blank">Resume</a></li>
         </ul>
       </div>
     </nav>
@@ -471,13 +482,63 @@
           <p class="section-label">Upcoming</p>
 
           <!-- No gigs yet — replace this paragraph with <div class="gig"> blocks as needed. See CSS comments above for the template. -->
-          <div class="gig">
-            <span class="gig-date">October 21-24 2026</span>
+          <p class="upcoming-empty">
+            Check back for upcoming performances and events.
+          </p>
+        </div>
+      </section>
+
+      <!-- ── Recent Work ────────────────────────────────────── -->
+      <section id="recent">
+        <div class="container">
+          <p class="section-label">Recent Work</p>
+
+          <!--
+          RECENT WORK: Keep to ~5 highlights. Cycle older entries out as new ones come in.
+          Use the same <div class="gig gig-past"> structure as upcoming gigs.
+          Format: Season year or month/year for the date column.
+        -->
+
+          <div class="gig gig-past">
+            <span class="gig-date">2025</span>
             <span class="gig-title"
-              >Opera Theatre of St. Louis — <em>Joshua's Boots</em> (Associate
-              Music Director)</span
+              >Opera Theatre of Saint Louis — Repetiteur, Festival Season</span
             >
-            <span class="gig-detail">COCA</span>
+            <span class="gig-detail">Loretto-Hilton Center, St. Louis, MO</span>
+          </div>
+
+          <div class="gig gig-past">
+            <span class="gig-date">2025</span>
+            <span class="gig-title"
+              >Opera Theatre of Saint Louis — New Works Collective</span
+            >
+            <span class="gig-detail">St. Louis, MO</span>
+          </div>
+
+          <div class="gig gig-past">
+            <span class="gig-date">2024–25</span>
+            <span class="gig-title"
+              >Union Avenue Opera — Season Performances</span
+            >
+            <span class="gig-detail"
+              >Union Avenue Christian Church, St. Louis, MO</span
+            >
+          </div>
+
+          <div class="gig gig-past">
+            <span class="gig-date">2024–25</span>
+            <span class="gig-title"
+              >Winter Opera St. Louis — Season Performances</span
+            >
+            <span class="gig-detail">St. Louis, MO</span>
+          </div>
+
+          <div class="gig gig-past">
+            <span class="gig-date">2024–25</span>
+            <span class="gig-title">OTSL Artists-in-Training — Coach</span>
+            <span class="gig-detail"
+              >Opera Theatre of Saint Louis, St. Louis, MO</span
+            >
           </div>
         </div>
       </section>
