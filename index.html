@@ -149,19 +149,22 @@
 
       /* ── Headshot ─────────────────────────────────────────── */
       /*
-      DROP YOUR HEADSHOT HERE
-      Replace "img/headshot.jpg" with your actual file path.
-      Recommended: square or portrait crop, at least 400px wide.
-      The <img> tag is in the HTML below inside .hero-photo.
+      HEADSHOT: image lives at img/headshot.jpg (1167×1290 source).
+      Displayed as a fixed square; object-fit:cover handles the crop.
     */
       .hero-photo {
         flex-shrink: 0;
         width: 200px;
+        height: 200px;
+        overflow: hidden;
       }
 
       .hero-photo img {
         width: 100%;
+        height: 100%;
         display: block;
+        object-fit: cover;
+        object-position: center top;
         /* Slightly desaturated to keep the palette coherent */
         filter: grayscale(15%);
       }
@@ -352,6 +355,7 @@
 
         .hero-photo {
           width: 140px;
+          height: 140px;
         }
 
         nav .container {
@@ -415,13 +419,13 @@
             </p>
           </div>
 
-          <!-- HEADSHOT: replace src with your image file, e.g. "img/headshot.jpg" -->
+          <!-- HEADSHOT: lives at img/headshot.jpg (1167×1290 source, displayed as 200×200 square) -->
           <div class="hero-photo">
             <img
               src="img/headshot.jpg"
               alt="Jonathan Heaney, pianist and vocal coach"
               width="200"
-              height="250"
+              height="200"
             />
           </div>
         </div>
