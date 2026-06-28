@@ -83,7 +83,6 @@
         flex-shrink: 0;
       }
 
-      /* ── Hamburger (hidden on desktop) ───────────────────── */
       .nav-toggle {
         display: none;
       }
@@ -113,7 +112,6 @@
         transform-origin: center;
       }
 
-      /* Animate to X when open */
       .nav-toggle:checked ~ .container .hamburger span:nth-child(1) {
         transform: translateY(6.5px) rotate(45deg);
       }
@@ -124,7 +122,6 @@
         transform: translateY(-6.5px) rotate(-45deg);
       }
 
-      /* ── Nav links ────────────────────────────────────────── */
       .nav-links {
         list-style: none;
         display: flex;
@@ -146,7 +143,7 @@
         color: var(--blue);
       }
 
-      /* ── Hero / masthead ──────────────────────────────────── */
+      /* ── Hero ─────────────────────────────────────────────── */
       .hero {
         padding: 5rem 0 4rem;
         border-bottom: 1px solid var(--rule);
@@ -194,7 +191,6 @@
         letter-spacing: 0.04em;
       }
 
-      /* ── Headshot ─────────────────────────────────────────── */
       .hero-photo {
         flex-shrink: 0;
         width: 200px;
@@ -230,7 +226,7 @@
         margin-bottom: 2rem;
       }
 
-      /* ── About / Bio ──────────────────────────────────────── */
+      /* ── Bio ──────────────────────────────────────────────── */
       .bio p {
         font-size: 1rem;
         line-height: 1.8;
@@ -242,7 +238,7 @@
         margin-bottom: 0;
       }
 
-      /* ── Upcoming ─────────────────────────────────────────── */
+      /* ── Gigs ─────────────────────────────────────────────── */
       .upcoming-empty {
         font-size: 0.9rem;
         color: var(--ink-soft);
@@ -281,12 +277,11 @@
         color: var(--ink-soft);
       }
 
-      /* ── Recent Work ──────────────────────────────────────── */
       .gig-past .gig-title {
         color: var(--ink-soft);
       }
 
-      /* ── Signup ───────────────────────────────────────────── */
+      /* ── Signup — Kit embed overrides ─────────────────────── */
       .signup-intro {
         font-size: 0.97rem;
         color: var(--ink-soft);
@@ -294,66 +289,122 @@
         max-width: 480px;
       }
 
-      .signup-form {
-        display: flex;
-        gap: 0.75rem;
-        flex-wrap: wrap;
+      /* Hide all Kit chrome */
+      .formkit-form[data-uid='52211a07e2'] .formkit-header,
+      .formkit-form[data-uid='52211a07e2'] .formkit-subheader,
+      .formkit-form[data-uid='52211a07e2'] .formkit-guarantee,
+      .formkit-form[data-uid='52211a07e2'] [data-element='powered-by'],
+      .formkit-form[data-uid='52211a07e2']
+        .formkit-powered-by-convertkit-container {
+        display: none !important;
       }
 
-      .signup-input {
-        flex: 1;
-        min-width: 220px;
-        padding: 0.65rem 1rem;
-        font-family: 'Inter', sans-serif;
-        font-size: 0.9rem;
-        font-weight: 300;
-        color: var(--ink);
-        background: var(--bg);
-        border: 1px solid var(--rule);
-        outline: none;
-        transition: border-color 0.15s;
-        appearance: none;
-        -webkit-appearance: none;
-        border-radius: 0;
+      /* Form container */
+      .formkit-form[data-uid='52211a07e2'] {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: none !important;
+        width: 100% !important;
       }
 
-      .signup-input:focus {
-        border-color: var(--blue);
+      /* Row containing field + button */
+      .formkit-form[data-uid='52211a07e2'] [data-element='fields'],
+      .formkit-form[data-uid='52211a07e2'] .formkit-fields {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 0.75rem !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        align-items: stretch !important;
       }
 
-      .signup-input::placeholder {
-        color: var(--ink-soft);
-        opacity: 0.7;
+      /* Field wrapper */
+      .formkit-form[data-uid='52211a07e2'] .formkit-field {
+        flex: 1 !important;
+        min-width: 200px !important;
+        margin: 0 !important;
+        padding: 0 !important;
       }
 
-      .signup-btn {
-        padding: 0.65rem 1.5rem;
-        font-family: 'Inter', sans-serif;
-        font-size: 0.72rem;
-        font-weight: 500;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--bg);
-        background: var(--blue);
-        border: none;
-        cursor: pointer;
-        transition: background 0.15s;
-        border-radius: 0;
+      /* Email input */
+      .formkit-form[data-uid='52211a07e2'] .formkit-input {
+        width: 100% !important;
+        padding: 0.65rem 1rem !important;
+        font-family: 'Inter', sans-serif !important;
+        font-size: 0.9rem !important;
+        font-weight: 300 !important;
+        color: #0b0c0e !important;
+        background: #f7f6f2 !important;
+        border: 1px solid #d0cbbc !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        outline: none !important;
+        height: auto !important;
+        line-height: 1.5 !important;
       }
 
-      .signup-btn:hover {
-        background: var(--blue-lt);
+      .formkit-form[data-uid='52211a07e2'] .formkit-input:focus {
+        border-color: #2b4c8c !important;
       }
 
-      .signup-message {
-        display: none;
-        font-size: 0.9rem;
-        color: var(--blue);
-        margin-top: 1rem;
+      .formkit-form[data-uid='52211a07e2'] .formkit-input::placeholder {
+        color: #5a6475 !important;
+        opacity: 0.7 !important;
       }
 
-      .signup-message.visible {
-        display: block;
+      /* Submit button wrapper — prevent stretching */
+      .formkit-form[data-uid='52211a07e2'] [data-element='submit'] {
+        flex: 0 0 auto !important;
+        width: auto !important;
+        display: flex !important;
+        align-items: stretch !important;
+      }
+
+      /* Submit button */
+      .formkit-form[data-uid='52211a07e2'] .formkit-submit {
+        padding: 0 1.5rem !important;
+        font-family: 'Inter', sans-serif !important;
+        font-size: 0.72rem !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.1em !important;
+        text-transform: uppercase !important;
+        color: #f7f6f2 !important;
+        background: #2b4c8c !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        cursor: pointer !important;
+        width: auto !important;
+        height: auto !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        line-height: 1 !important;
+        transition: background 0.15s !important;
+      }
+
+      .formkit-form[data-uid='52211a07e2'] .formkit-submit:hover,
+      .formkit-form[data-uid='52211a07e2'] .formkit-submit:hover > span {
+        background: #3d6bb5 !important;
+        color: #f7f6f2 !important;
+      }
+
+      .formkit-form[data-uid='52211a07e2'] .formkit-submit > span {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 0.72rem !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.1em !important;
+        text-transform: uppercase !important;
+        color: #f7f6f2 !important;
+        background: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: block !important;
+        line-height: 1 !important;
       }
 
       /* ── Projects ─────────────────────────────────────────── */
@@ -483,7 +534,7 @@
         }
       }
 
-      /* ── Responsive (non-nav) ─────────────────────────────── */
+      /* ── Responsive ───────────────────────────────────────── */
       @media (max-width: 600px) {
         .hero-inner {
           flex-direction: column-reverse;
@@ -564,8 +615,6 @@
               Available for opera, concert, and coaching engagements
             </p>
           </div>
-
-          <!-- HEADSHOT: lives at img/headshot.jpg (1167×1290 source, displayed as 200×200 square) -->
           <div class="hero-photo">
             <img
               src="img/headshot.jpg"
@@ -614,7 +663,6 @@
       <section id="upcoming">
         <div class="container">
           <p class="section-label">Upcoming</p>
-
           <div class="gig">
             <span class="gig-date">October 21–24 2026</span>
             <span class="gig-title"
@@ -629,20 +677,12 @@
       <section id="recent">
         <div class="container">
           <p class="section-label">Recent Work</p>
-
-          <!--
-            RECENT WORK: Keep to ~5 highlights. Cycle older entries out as new ones come in.
-            Use the same <div class="gig gig-past"> structure as upcoming gigs.
-            Format: Season year or month/year for the date column.
-          -->
-
           <div class="gig gig-past">
             <span class="gig-date">2025</span>
             <span class="gig-title"
               >Union Avenue Opera — <em>Josephine/Pagliacci</em></span
             >
           </div>
-
           <div class="gig gig-past">
             <span class="gig-date">2025</span>
             <span class="gig-title"
@@ -650,7 +690,6 @@
               <em>Die Fledermaus, Don Pasquale</em></span
             >
           </div>
-
           <div class="gig gig-past">
             <span class="gig-date">2025</span>
             <span class="gig-title"
@@ -668,26 +707,12 @@
             I'm working on a few resources for singers and teachers. Leave your
             email and I'll let you know when they're ready.
           </p>
-          <form
-            class="signup-form"
-            action="https://hustling-creator-7356.kit.com/efdd08a7dc/subscriptions"
-            method="post"
-            id="kit-signup-form"
-          >
-            <input
-              class="signup-input"
-              type="email"
-              name="email_address"
-              placeholder="your@email.com"
-              required
-              autocomplete="email"
-              aria-label="Email address"
-            />
-            <button class="signup-btn" type="submit">Subscribe</button>
-          </form>
-          <p class="signup-message" id="signup-message">
-            You're in — I'll be in touch.
-          </p>
+          <!-- Kit embed — Clare template, styled via CSS overrides above -->
+          <script
+            async
+            data-uid="52211a07e2"
+            src="https://hustling-creator-7356.kit.com/52211a07e2/index.js"
+          ></script>
         </div>
       </section>
 
@@ -704,7 +729,6 @@
               </p>
               <span class="project-card-link">Explore →</span>
             </a>
-
             <a class="project-card" href="/opera-stats.html">
               <p class="project-card-title">
                 Worldwide Opera Performance Stats
@@ -749,25 +773,6 @@
           navToggle.checked = false;
         });
       });
-
-      // Signup form — submit to Kit, show confirmation inline
-      const form = document.getElementById('kit-signup-form');
-      const msg = document.getElementById('signup-message');
-      if (form) {
-        form.addEventListener('submit', async function (e) {
-          e.preventDefault();
-          const data = new FormData(form);
-          try {
-            await fetch(form.action, {
-              method: 'POST',
-              body: data,
-              mode: 'no-cors',
-            });
-          } catch (_) {}
-          form.style.display = 'none';
-          msg.classList.add('visible');
-        });
-      }
     </script>
   </body>
 </html>
