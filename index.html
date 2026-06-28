@@ -318,8 +318,17 @@
         flex-wrap: wrap !important;
         gap: 0.75rem !important;
         margin: 0 !important;
+        margin-top: 0 !important;
         padding: 0 !important;
         align-items: stretch !important;
+      }
+
+      /* Remove any top margin Kit adds above the fields wrapper */
+      .formkit-form[data-uid='52211a07e2'] > div,
+      .formkit-form[data-uid='52211a07e2'] .formkit-column,
+      .formkit-form[data-uid='52211a07e2'] [data-style='clean'] {
+        padding: 0 !important;
+        margin: 0 !important;
       }
 
       /* Field wrapper */
