@@ -294,66 +294,97 @@
         max-width: 480px;
       }
 
-      .signup-form {
-        display: flex;
-        gap: 0.75rem;
-        flex-wrap: wrap;
+      /* Hide all Kit chrome — header, subheader, guarantee, powered-by */
+      .formkit-form[data-uid='efdd08a7dc'] .formkit-header,
+      .formkit-form[data-uid='efdd08a7dc'] .formkit-subheader,
+      .formkit-form[data-uid='efdd08a7dc'] .formkit-guarantee,
+      .formkit-form[data-uid='efdd08a7dc'] [data-element='powered-by'],
+      .formkit-form[data-uid='efdd08a7dc']
+        .formkit-powered-by-convertkit-container {
+        display: none !important;
       }
 
-      .signup-input {
-        flex: 1;
-        min-width: 220px;
-        padding: 0.65rem 1rem;
-        font-family: 'Inter', sans-serif;
-        font-size: 0.9rem;
-        font-weight: 300;
-        color: var(--ink);
-        background: var(--bg);
-        border: 1px solid var(--rule);
-        outline: none;
-        transition: border-color 0.15s;
-        appearance: none;
-        -webkit-appearance: none;
-        border-radius: 0;
+      /* Kit form container — reset all Kit structural styling */
+      .formkit-form[data-uid='efdd08a7dc'] {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: none !important;
+        font-family: 'Inter', sans-serif !important;
       }
 
-      .signup-input:focus {
-        border-color: var(--blue);
+      /* Inner field+button row */
+      .formkit-form[data-uid='efdd08a7dc'] [data-element='fields'] {
+        display: flex !important;
+        gap: 0.75rem !important;
+        flex-wrap: wrap !important;
+        margin: 0 !important;
+        padding: 0 !important;
       }
 
-      .signup-input::placeholder {
-        color: var(--ink-soft);
-        opacity: 0.7;
+      .formkit-form[data-uid='efdd08a7dc'] .formkit-field {
+        flex: 1 !important;
+        min-width: 220px !important;
+        margin: 0 !important;
+        padding: 0 !important;
       }
 
-      .signup-btn {
-        padding: 0.65rem 1.5rem;
-        font-family: 'Inter', sans-serif;
-        font-size: 0.72rem;
-        font-weight: 500;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--bg);
-        background: var(--blue);
-        border: none;
-        cursor: pointer;
-        transition: background 0.15s;
-        border-radius: 0;
+      /* Email input */
+      .formkit-form[data-uid='efdd08a7dc'] .formkit-input {
+        width: 100% !important;
+        padding: 0.65rem 1rem !important;
+        font-family: 'Inter', sans-serif !important;
+        font-size: 0.9rem !important;
+        font-weight: 300 !important;
+        color: #0b0c0e !important;
+        background: #f7f6f2 !important;
+        border: 1px solid #d0cbbc !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        outline: none !important;
+        height: auto !important;
       }
 
-      .signup-btn:hover {
-        background: var(--blue-lt);
+      .formkit-form[data-uid='efdd08a7dc'] .formkit-input:focus {
+        border-color: #2b4c8c !important;
       }
 
-      .signup-message {
-        display: none;
-        font-size: 0.9rem;
-        color: var(--blue);
-        margin-top: 1rem;
+      .formkit-form[data-uid='efdd08a7dc'] .formkit-input::placeholder {
+        color: #5a6475 !important;
+        opacity: 0.7 !important;
       }
 
-      .signup-message.visible {
-        display: block;
+      /* Submit button */
+      .formkit-form[data-uid='efdd08a7dc'] .formkit-submit {
+        padding: 0.65rem 1.5rem !important;
+        font-family: 'Inter', sans-serif !important;
+        font-size: 0.72rem !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.1em !important;
+        text-transform: uppercase !important;
+        color: #f7f6f2 !important;
+        background: #2b4c8c !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        cursor: pointer !important;
+        width: auto !important;
+        height: auto !important;
+        margin: 0 !important;
+      }
+
+      .formkit-form[data-uid='efdd08a7dc'] .formkit-submit:hover {
+        background: #3d6bb5 !important;
+      }
+
+      .formkit-form[data-uid='efdd08a7dc'] .formkit-submit > span {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 0.72rem !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.1em !important;
+        text-transform: uppercase !important;
       }
 
       /* ── Projects ─────────────────────────────────────────── */
@@ -669,31 +700,12 @@
             I'm working on a few resources for singers and teachers. Leave your
             email and I'll let you know when they're ready.
           </p>
-
-          <!-- Our styled form — visible to the user -->
-          <div class="signup-form" id="our-signup-form">
-            <input
-              class="signup-input"
-              type="email"
-              id="our-email-input"
-              placeholder="your@email.com"
-              autocomplete="email"
-              aria-label="Email address"
-            />
-            <button class="signup-btn" id="our-signup-btn">Subscribe</button>
-          </div>
-          <p class="signup-message" id="signup-message">
-            You're in — I'll be in touch.
-          </p>
-
-          <!-- Kit's form: loaded by their script, hidden from view -->
-          <div style="display: none" aria-hidden="true">
-            <script
-              async
-              data-uid="efdd08a7dc"
-              src="https://hustling-creator-7356.kit.com/efdd08a7dc/index.js"
-            ></script>
-          </div>
+          <!-- Kit's embed — styled via CSS overrides above -->
+          <script
+            async
+            data-uid="efdd08a7dc"
+            src="https://hustling-creator-7356.kit.com/efdd08a7dc/index.js"
+          ></script>
         </div>
       </section>
 
@@ -755,63 +767,6 @@
           navToggle.checked = false;
         });
       });
-
-      // Signup form — proxy through Kit's own hidden form to avoid CORS
-      document
-        .getElementById('our-signup-btn')
-        .addEventListener('click', function () {
-          const emailVal = document
-            .getElementById('our-email-input')
-            .value.trim();
-          if (!emailVal || !emailVal.includes('@')) {
-            document.getElementById('our-email-input').focus();
-            return;
-          }
-
-          // Find Kit's rendered input and submit button (injected by their script)
-          const kitInput = document.querySelector(
-            '.formkit-form input[name="email_address"]',
-          );
-          const kitBtn = document.querySelector(
-            '.formkit-form [data-element="submit"]',
-          );
-
-          if (kitInput && kitBtn) {
-            kitInput.value = emailVal;
-            kitBtn.click();
-            // Show our confirmation and hide our form
-            document.getElementById('our-signup-form').style.display = 'none';
-            document.getElementById('signup-message').classList.add('visible');
-          } else {
-            // Kit's script hasn't loaded yet — fall back to direct POST
-            // (works once site is live on a real domain with correct CORS headers)
-            const fd = new FormData();
-            fd.append('email_address', emailVal);
-            fetch(
-              'https://hustling-creator-7356.kit.com/efdd08a7dc/subscriptions',
-              {
-                method: 'POST',
-                body: fd,
-                mode: 'no-cors',
-              },
-            ).finally(function () {
-              document.getElementById('our-signup-form').style.display = 'none';
-              document
-                .getElementById('signup-message')
-                .classList.add('visible');
-            });
-          }
-        });
-
-      // Also fire on Enter key in the email field
-      document
-        .getElementById('our-email-input')
-        .addEventListener('keydown', function (e) {
-          if (e.key === 'Enter') {
-            e.preventDefault();
-            document.getElementById('our-signup-btn').click();
-          }
-        });
     </script>
   </body>
 </html>
