@@ -333,7 +333,7 @@
       /* Field wrapper */
       .formkit-form[data-uid='52211a07e2'] .formkit-field {
         flex: 1 !important;
-        min-width: 200px !important;
+        min-width: 0 !important;
         margin: 0 !important;
         padding: 0 !important;
       }
@@ -561,6 +561,22 @@
 
         .gig-detail {
           grid-column: 1;
+        }
+
+        /* Kit form: stack input and button vertically on mobile */
+        .formkit-form[data-uid='52211a07e2'] [data-element='fields'],
+        .formkit-form[data-uid='52211a07e2'] .formkit-fields {
+          flex-direction: column !important;
+        }
+
+        .formkit-form[data-uid='52211a07e2'] [data-element='submit'] {
+          width: 100% !important;
+        }
+
+        .formkit-form[data-uid='52211a07e2'] .formkit-submit {
+          width: 100% !important;
+          justify-content: center !important;
+          padding: 0.65rem 1.5rem !important;
         }
       }
 
